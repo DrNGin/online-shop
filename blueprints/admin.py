@@ -5,5 +5,6 @@ app = Blueprint("admin", __name__)
 
 
 @app.route('/admin')
-def main():
+def admin():
     return "Hello! admin page"
+
