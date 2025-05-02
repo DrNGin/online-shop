@@ -1,0 +1,1 @@
+SQLAlchemy_DATABASE_URI = "sqlite:///project.db"

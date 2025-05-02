@@ -1,4 +1,5 @@
 from flask import Blueprint
+import models.users
 
 app = Blueprint("user", __name__)
 
