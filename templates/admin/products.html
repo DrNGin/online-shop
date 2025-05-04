@@ -11,6 +11,7 @@
             <th>توضیحات</th>
             <th>قیمت</th>
             <th>فعال</th>
+            <th>ویرایش</th>
         </tr>
 
         {% for p in products %}
@@ -19,6 +20,7 @@
             <td>{{ p.description }}</td>
             <td>{{ p.price }}</td>
             <td>{{ "yes" if p.active == 1 else "no" }}</td>
+            <td><a href="/admin/dashboard/edit-product/{{ p.id }}">ویرایش</td>
         </tr>
         {% endfor %}
     </table>
@@ -27,7 +29,7 @@
         <input type="text" name="name" placeholder="نام محصول"><br>
         <textarea name="description" placeholder="توضیحات"></textarea><br>
 		<input type="number" name="price" placeholder="قیمت محصول"><br>
-        <label>فعال</label><input type="checkbox" name="active" value=1><br>
+        <label>فعال</label><input type="checkbox" name="active" value="1"><br>
 		<input type="submit">
     </form>
 

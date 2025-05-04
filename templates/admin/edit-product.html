@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block header %}
+	<title>admin products</title>
+{% endblock header %}
+
+{% block body %}
+
+    <form action="#" method="post">
+        <input type="text" name="name" placeholder="نام محصول" value="{{ product.name }}"><br>
+        <textarea name="description" placeholder="توضیحات">{{ product.description }}</textarea><br>
+		<input type="number" name="price" placeholder="قیمت محصول" value="{{ product.price }}"><br>
+        <label>فعال</label><input type="checkbox" name="active" value="1" {{ "checked" if product.active == 1 }}><br>
+		<input type="submit">
+    </form>
+
+{% endblock body %}
